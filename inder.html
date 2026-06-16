@@ -53,7 +53,7 @@
 
 <div class="container">
     <h1>📝 Mon Bloc-Notes</h1>
-    <textarea id="note" placeholder="Commence à écrire ici... Tout est sauvegardé automatiquement !"></textarea>
+    <textarea id="note" placeholder="Commence à écrire ici... Tout est sauvegardé automatiquement CAR C COOL !"></textarea>
     <div id="status" class="status">En attente de modifications...</div>
 </div>
 
@@ -67,14 +67,14 @@
         const texteSauvegarde = localStorage.getItem('monBlocNotes');
         if (texteSauvegarde) {
             zoneTexte.value = texteSauvegarde;
-            zoneStatus.textContent = "Dernière note chargée avec succès.";
+            zoneStatus.textContent = "Dernière note chargée avec succès ET OUI  C MAGIQUE.";
         }
     };
 
     // Étape 2 : Sauvegarder automatiquement à chaque fois que l'utilisateur tape une lettre
     zoneTexte.addEventListener('input', function() {
         localStorage.setItem('monBlocNotes', zoneTexte.value);
-        zoneStatus.textContent = "Sauvegardé automatiquement à " + new Date().toLocaleTimeString();
+        zoneStatus.textContent = "Sauvegardé POTENTIELLEMENT automatiquement à " + new Date().toLocaleTimeString();
     });
 </script>
 
