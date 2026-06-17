@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Simple</title>
+    <style>
+        /* Style de base pour centrer le contenu */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* La carte centrale */
+        .carte {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Le bouton */
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carte">
+        <h1>Bienvenue 🚀</h1>
+        <p>Ceci est l'interface d'un site web très simple. Tu peux modifier le texte directement dans le code HTML pour l'adapter à tes besoins.</p>
+        <button onclick="continuer()">Continuer</button>
+    </div>
+
+    <script>
+        // Petite action quand on clique sur le bouton
+        function continuer() {
+            alert("Bouton cliqué !");
+        }
+    </script>
+
+</body>
+</html>
