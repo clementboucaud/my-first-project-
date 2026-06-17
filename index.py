@@ -1,5 +1,5 @@
-from time import
-from math import
+from time import*
+from math import*
 
 def timer(a):
     print("timer()")
