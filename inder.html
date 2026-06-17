@@ -3,80 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Bloc-Notes Privé</title>
+    <title>Site Simple</title>
     <style>
+        /* Style de base pour centrer le contenu */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            margin: 0;
-            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
             display: flex;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+        /* La carte centrale */
+        .carte {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
         }
+
         h1 {
-            color: #333;
-            margin-top: 0;
-            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 15px;
         }
-        textarea {
-            width: 100%;
-            height: 400px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
+
+        p {
             font-size: 16px;
-            resize: vertical;
-            box-sizing: border-box;
-            outline: none;
-            transition: border-color 0.3s;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 20px;
         }
-        textarea:focus {
-            border-color: #4CAF50;
+
+        /* Le bouton */
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
         }
-        .status {
-            text-align: right;
-            font-size: 12px;
-            color: #777;
-            margin-top: 5px;
+
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>📝 Mon Bloc-Notes</h1>
-    <textarea id="note" placeholder="Commence à écrire ici... Tout est sauvegardé automatiquement CAR C COOL !"></textarea>
-    <div id="status" class="status">En attente de modifications...</div>
-</div>
+    <div class="carte">
+        <h1>Bienvenue 🚀</h1>
+        <p>Ceci est l'interface d'un site web très simple. Tu peux modifier le texte directement dans le code HTML pour l'adapter à tes besoins.</p>
+        <button onclick="continuer()">Continuer</button>
+    </div>
 
-<script>
-    // On récupère les éléments HTML
-    const zoneTexte = document.getElementById('note');
-    const zoneStatus = document.getElementById('status');
-
-    // Étape 1 : Charger le texte sauvegardé au démarrage
-    window.onload = function() {
-        const texteSauvegarde = localStorage.getItem('monBlocNotes');
-        if (texteSauvegarde) {
-            zoneTexte.value = texteSauvegarde;
-            zoneStatus.textContent = "Dernière note chargée avec succès ET OUI  C MAGIQUE.";
+    <script>
+        // Petite action quand on clique sur le bouton
+        function continuer() {
+            alert("Bouton cliqué !");
         }
-    };
-
-    // Étape 2 : Sauvegarder automatiquement à chaque fois que l'utilisateur tape une lettre
-    zoneTexte.addEventListener('input', function() {
-        localStorage.setItem('monBlocNotes', zoneTexte.value);
-        zoneStatus.textContent = "Sauvegardé POTENTIELLEMENT automatiquement à " + new Date().toLocaleTimeString();
-    });
-</script>
+    </script>
 
 </body>
 </html>
